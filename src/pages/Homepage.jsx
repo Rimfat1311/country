@@ -21,7 +21,6 @@ const Homepage = () => {
     fetchCountriesData(); 
   }, []);
 
- 
   return (
     <div className='flex justify-between my-7 px-16'>
       <FaSearch className='relative left-14 top-3 z-10'/>
