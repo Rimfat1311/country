@@ -2,7 +2,7 @@ import React from 'react'
 
 const Previewpage = () => {
   return (
-    <div>Previewpage</div>
+    <div></div>
   )
 }
 
