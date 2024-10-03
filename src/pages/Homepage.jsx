@@ -21,6 +21,7 @@ const Homepage = () => {
     fetchCountriesData(); 
   }, []);
 
+
   return (
     <div className='flex justify-between my-7 px-16'>
       <FaSearch className='relative left-14 top-3 z-10'/>
@@ -31,7 +32,6 @@ const Homepage = () => {
       />
       <select
        name="filter by region"
-       
         id="filter by region" 
         className='h-8'>
         <option value="1">filter by region</option>
