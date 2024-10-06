@@ -36,6 +36,7 @@ const Homepage = () => {
         <option value="1">filter by region</option>
         <option value="2">Africa</option>
       </select>
+      <div></div>
     </div>
   )
 }
