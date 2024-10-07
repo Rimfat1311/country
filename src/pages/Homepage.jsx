@@ -1,7 +1,10 @@
-import React, { useEffect } from 'react';
-import { FaSearch } from "react-icons/fa";
+import React, { useEffect, useState } from 'react';
+import Filters from '../components/Filters';
+
 
 const Homepage = () => {
+  const [countries, setCountries] = useState([]); // Initialize as an empty array
+
   const BASE_URL = 'https://restcountries.com/v3.1/all';
 
   const fetchCountriesData = async () => {
@@ -12,6 +15,7 @@ const Homepage = () => {
       }
       const data = await response.json();
       console.log('Fetched Data:', data);
+      setCountries(data); // Set the fetched data to state
     } catch (error) {
       console.error('Error fetching data:', error);
     }
@@ -22,23 +26,25 @@ const Homepage = () => {
   }, []);
 
   return (
-    <div className='flex justify-between my-7 px-16'>
-      <FaSearch className='relative left-14 top-3 z-10' />
-      <input
-        type="text"
-        className='absolute border shadow-md  mx- w-96 px-20 h-10 outline-none'
-        placeholder='Search for any country....'
-      />
-      <select
-        name="filter by region"
-        id="filter by region"
-        className='h-8'>
-        <option value="1">filter by region</option>
-        <option value="2">Africa</option>
-      </select>
-    
+    <div className='w-full h-full px-16  bg-slate-50'>
+      <Filters />
+      <div className='grid grid-cols-4 gap-10'>
+        {countries.map((country) => (
+          <div key={country.cca3} className='border  rounded-lg bg-white'>
+           
+            <img src={country.flags.png} alt='coutries flags' className='w-full h-48 object-cover border rounded-lg' />
+            <div className='p-6'>
+            <h2 className='text-xl font-bold'>{country.name.common}</h2>
+            <p>Population: {country.population}</p>
+            <p>Capital: {country.capital}</p>
+            <p>Region: {country.region }</p>
+            
+            </div>
+          </div>
+        ))}
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default Homepage
+export default Homepage;

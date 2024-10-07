@@ -1,11 +1,12 @@
 import React from 'react'
+import { MdOutlineDarkMode } from "react-icons/md";
 
 const Navbar = () => {
   return (
-    <div className='flex justify-between px-16 py-5 w-full bg-gray-100'>
+    <div className='flex justify-between px-16 py-5 w-full'>
 
         <div>Where in the world</div>
-        <div>Dark Mode</div>
+        <div className='flex'><MdOutlineDarkMode className='w-10 h-6'/>Dark Mode</div>
         
     </div>
   )
