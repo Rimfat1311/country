@@ -10,6 +10,8 @@ const Filters = () => {
         className='absolute border shadow-md  mx- w-96 px-20 h-10 outline-none'
         placeholder='Search for any country....'
       />
+
+      
       <select
         name="filter by region"
         id="filter by region"

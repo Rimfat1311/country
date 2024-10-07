@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Filters from '../components/Filters';
+import { Link } from 'react-router-dom';
 
 
 const Homepage = () => {
@@ -30,10 +31,11 @@ const Homepage = () => {
       <Filters />
       <div className='grid grid-cols-4 gap-10'>
         {countries.map((country) => (
-          <div key={country.cca3} className='border  rounded-lg shadow-sm shadow-black'>
+          <div key={country.cca3} className='border  rounded-lg shadow-sm shadow-gray-200'>
            
             <img src={country.flags.png} alt='coutries flags' className='w-full h-48 object-cover border rounded-t-lg' />
             <div className='p-6 '>
+            
             <h2 className='text-xl font-bold'>{country.name.common}</h2>
             <p>Population: {country.population}</p>
             <p>Capital: {country.capital}</p>
@@ -41,6 +43,7 @@ const Homepage = () => {
             
             </div>
           </div>
+          
         ))}
       </div>
     </div>
