@@ -11,7 +11,7 @@ const Filters = () => {
         placeholder='Search for any country....'
       />
 
-      
+
       <select
         name="filter by region"
         id="filter by region"

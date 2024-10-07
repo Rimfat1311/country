@@ -29,7 +29,7 @@ const Homepage = () => {
   return (
     <div className='w-full h-full px-16  bg-slate-50'>
       <Filters />
-      <div className='grid grid-cols-4 gap-10'>
+      <div className='grid grid-cols-1 md:grid-cols-4 gap-10'>
         {countries.map((country) => (
           <div key={country.cca3} className='border  rounded-lg shadow-sm shadow-gray-200'>
            
