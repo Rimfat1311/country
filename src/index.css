@@ -1,15 +1,8 @@
-/* @tailwind base;
-@tailwind components;
-@tailwind utilities; */
-
-
-
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Apply default styles */
+
 body {
   @apply bg-white text-black dark:bg-gray-900 dark:text-white;
 }
