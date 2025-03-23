@@ -4,7 +4,7 @@ import Filters from '../components/Filters';
 
 
 const Homepage = () => {
-  const [countries, setCountries] = useState([]); // Initialize as an empty array
+  const [countries, setCountries] = useState([]); 
 
   const BASE_URL = 'https://restcountries.com/v3.1/all';
 

@@ -3,7 +3,7 @@ import React from 'react'
 const PreviewCountries = () => {
   return (
     <div>
-      <div>previews</div>
+      <div>previews countries details here</div>
     </div>
   )
 }
